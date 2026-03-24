@@ -2,7 +2,8 @@
 Description=Run Crypto Daily Digest at 08:00 BJT
 
 [Timer]
-OnCalendar=*-*-* 00:00:00 UTC
+# FIXED: Use local time instead of UTC
+OnCalendar=*-*-* 08:00:00
 Persistent=true
 Unit=crypto-daily.service
 
