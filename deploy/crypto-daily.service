@@ -1,0 +1,14 @@
+[Unit]
+Description=Crypto Daily Digest Service
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/crypto_daily_agent
+ExecStart=/opt/crypto_daily_agent/.venv/bin/python -m agent.main --once
+EnvironmentFile=/opt/crypto_daily_agent/.env
+StandardOutput=append:/opt/crypto_daily_agent/agent/output/systemd.log
+StandardError=append:/opt/crypto_daily_agent/agent/output/systemd.log
+
+[Install]
+WantedBy=multi-user.target

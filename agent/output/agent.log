@@ -1,0 +1,14 @@
+2026-03-24 10:49:32,453 INFO digest_run_started
+2026-03-24 10:49:37,869 INFO collector=BinanceAnnouncementCollector items=0
+2026-03-24 10:49:48,775 INFO collector=CoinDeskRssCollector items=20
+2026-03-24 10:49:48,775 INFO collector=NewsApiCollector items=0
+2026-03-24 10:49:48,776 INFO collector=XListCollector items=0
+2026-03-24 10:49:54,292 INFO collector=OnchainRssCollector items=19
+2026-03-24 10:49:55,029 INFO email_disabled file=D:\Python_Projects\crypto_daily_agent\agent\output\crypto_digest_20260324.png
+2026-03-24 10:51:44,992 INFO digest_run_started
+2026-03-24 10:51:56,011 INFO collector=BinanceAnnouncementCollector items=0
+2026-03-24 10:52:06,925 INFO collector=CoinDeskRssCollector items=20
+2026-03-24 10:52:06,926 INFO collector=NewsApiCollector items=0
+2026-03-24 10:52:06,927 INFO collector=XListCollector items=0
+2026-03-24 10:52:12,427 INFO collector=OnchainRssCollector items=19
+2026-03-24 10:52:13,147 INFO email_disabled file=D:\Python_Projects\crypto_daily_agent\agent\output\crypto_digest_20260324.png

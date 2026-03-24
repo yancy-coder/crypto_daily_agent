@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Crypto Daily Digest at 08:00 BJT
+
+[Timer]
+OnCalendar=*-*-* 00:00:00 UTC
+Persistent=true
+Unit=crypto-daily.service
+
+[Install]
+WantedBy=timers.target
