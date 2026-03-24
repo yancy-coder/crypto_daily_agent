@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Crypto Brief</title>
+    <style>
+      :root {
+        --bg: #1c2228;
+        --panel: #242d35;
+        --panel-soft: #2d3944;
+        --text-main: #d6dde3;
+        --text-sub: #9aa7b3;
+        --line: #3c4954;
+        --accent: #9fb2c4;
+        --radius: 16px;
+      }
+      body {
+        margin: 0;
+        background: radial-gradient(circle at 20% 0%, #2b333b 0%, var(--bg) 48%);
+        font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        color: var(--text-main);
+      }
+      .canvas {
+        width: 1080px;
+        min-height: 1520px;
+        margin: 0 auto;
+        padding: 54px;
+        box-sizing: border-box;
+      }
+      .header {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        background: rgba(36, 45, 53, 0.78);
+      }
+      .muted {
+        color: var(--text-sub);
+        letter-spacing: 0.08em;
+        font-size: 14px;
+      }
+      h1 {
+        margin: 10px 0 8px;
+        font-weight: 600;
+        font-size: 34px;
+      }
+      .temp {
+        font-size: 16px;
+        color: var(--accent);
+      }
+      .list {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: rgba(45, 57, 68, 0.72);
+        padding: 18px 20px;
+      }
+      .title {
+        font-size: 21px;
+        margin: 0 0 8px;
+        line-height: 1.35;
+      }
+      .summary {
+        margin: 0;
+        color: var(--text-sub);
+        line-height: 1.5;
+        font-size: 15px;
+      }
+      .meta {
+        margin-top: 11px;
+        font-size: 13px;
+        color: var(--accent);
+      }
+      .footer {
+        margin-top: 20px;
+        color: #7f8b96;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <section class="header">
+        <div class="muted">{{ date_str }} · DAILY CRYPTO DIGEST</div>
+        <h1>{{ headline }}</h1>
+        <div class="temp">市场温度：{{ market_temperature }}</div>
+      </section>
+      <section class="list">
+        {% for card in cards %}
+        <article class="card">
+          <h2 class="title">#{{ card.rank }} {{ card.title }}</h2>
+          <p class="summary">{{ card.summary }}</p>
+          <div class="meta">{{ card.source }} · {{ card.time }} · {{ card.url }}</div>
+        </article>
+        {% endfor %}
+      </section>
+      <div class="footer">Source mix: Binance / media API / X / on-chain reports</div>
+    </div>
+  </body>
+</html>
